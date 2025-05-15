@@ -1,0 +1,77 @@
+/* Base page styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 40px;
+  line-height: 1.6;
+}
+
+/* Top section layout: image + text side-by-side */
+.top-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* helps on smaller screens */
+  margin-bottom: 40px;
+}
+
+/* Profile image style */
+.profile-pic {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Right side of the top section */
+.info {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Headings */
+h1 {
+  font-size: 2em;
+  color: #007acc;
+  margin-top: 0;
+}
+
+h2 {
+  color: #005f99;
+  margin-top: 1.5em;
+}
+
+h3 {
+  color: #333;
+}
+
+/* Links */
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Projects grid */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Each project box */
+.project-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+}
