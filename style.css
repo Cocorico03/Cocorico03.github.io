@@ -94,3 +94,40 @@ a:hover {
 .project-image:hover {
   transform: scale(1.05);
 }
+
+
+/* (1) Keep image + text side‑by‑side and centred on large screens */
+.top-section {
+  display: flex;
+  align-items: flex-start;   /* top‑align the text block with the photo */
+  justify-content: center;   /* centre the whole group */
+  gap: 2.5rem;               /* spacing between photo and text */
+}
+
+/* (2) Bigger photo, nicer crop & shadow */
+.profile-pic {
+  width: 240px;              /* increase size */
+  aspect-ratio: 1/1;         /* keep it perfectly square */
+  object-fit: cover;         /* crop rather than stretch */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+/* (3) Let the text column take the remaining width but stay readable */
+.info {
+  flex: 1;
+  max-width: 900px;
+}
+
+/* (4) Responsive fallback – stack vertically on small screens */
+@media (max-width: 700px) {
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info {
+    max-width: 100%;
+  }
+}
